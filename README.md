@@ -6,11 +6,11 @@ Snapkit Validation is a simple jQuery plugin for form validation. You can learn 
 The form should follow a flexible structure, based on css BEM syntax. In the end, it should result something similiar:
 
 form.form (The form)
-|_.form__group (A group, relative to a input/select/textarea and their possible errors)
-  |_.form__group__label (The label describing the field, i.e. Username/Password/E-mail/Message etc...)
-  |_input/select/textarea
-  |_.form__group__info (The possible errors)
-  |_.form__group__info
+\_.form__group (A group, relative to a input/select/textarea and their possible errors)
+ \_.form__group__label (The label describing the field, i.e. Username/Password/E-mail/Message etc...)
+  \_input/select/textarea
+  \_.form__group__info (The possible errors)
+  \_.form__group__info
   
 So the form has several .form__group, one for each field, and inside every .form__group there is a label, descibing the field, a input/select/textarea which will be filled by the user, and one or more potential errors (you will find more information about the possible error types below), and it might have a structure like this:
 
