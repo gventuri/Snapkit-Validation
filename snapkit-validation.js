@@ -1,4 +1,4 @@
-/*------------------------------------*\
+/*------------------------------------*\ 
     SNAPKIT VALIDATION PLUGIN V1.0 (https://github.com/Snapgle/Snapkit-Validation/)
     Automatically validate each form in the page
     
