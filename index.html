@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Snapkit Validation Plugin 1.0</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="snapkit-validation.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+		<div class="container">
+			<h1>Snapkit Validation Plugin 1.0 <br><small>(https://github.com/Snapgle/Snapkit-Validation)</small></h1>
+
+			<br><br><br>
+
+			<form class="form">
+				<div class="form-group form__group">
+			    <label for="name" class="form__group__label">Username*:</label>
+			    <input type="text" class="form-control" id="name">
+					<span class="form__group__info" data-validate="required">This field is required</span>
+			  </div>
+				<div class="form-group form__group">
+					<label for="email" class="form__group__label">E-mail address*:</label>
+					<input type="age" class="form-control" id="email">
+					<span class="form__group__info" data-validate="required">This field is required</span>
+					<span class="form__group__info" data-validate="email">E-mail not valid</span>
+				</div>
+				<div class="form-group form__group">
+					<label for="emailConfirm" class="form__group__label">Confirm e-mail address*:</label>
+					<input type="age" class="form-control" id="emailConfirm">
+					<span class="form__group__info" data-validate="required">This field is required</span>
+					<span class="form__group__info" data-validate="email">E-mail not valid</span>
+					<span class="form__group__info" data-validate="match | #email">The e-mails doesn't match</span>
+				</div>
+        <div class="form-group form__group">
+			    <label for="age" class="form__group__label">Age*:</label>
+			    <input type="text" class="form-control" id="age">
+					<span class="form__group__info" data-validate="required">This field is required</span>
+					<span class="form__group__info" data-validate="number">This field must be a number</span>
+			  </div>
+        <div class="form-group form__group">
+			    <label for="website" class="form__group__label">Website*:</label>
+			    <input type="text" class="form-control" id="website">
+					<span class="form__group__info" data-validate="required">This field is required</span>
+					<span class="form__group__info" data-validate="website">This field must be a valid website</span>
+			  </div>
+        <div class="form-group form__group">
+          <label for="comment" class="form__group__label">Comment*:</label>
+          <textarea class="form-control" rows="5" id="comment"></textarea>
+					<span class="form__group__info" data-validate="required">This field is required</span>
+					<span class="form__group__info" data-validate="minLenght | 20">The comment must be at least 20 chars long</span>
+					<span class="form__group__info" data-validate="maxLenght | 40">The comment must be no more than 40 chars long</span>
+        </div>
+				<div class="text-center">
+					<input class="btn btn-default" name="submit" type="submit" value="Send message">
+				</div>
+			</form>
+		</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="snapkit-validation.min.js"></script>
+  </body>
+</html>
