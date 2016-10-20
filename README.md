@@ -16,7 +16,7 @@ form.form (The form)
   |_.form__group__info
 ```
   
-Each field of the form should be contained inside a .form__group element. Inside every .form__group there should be a label, descibing the field (i.e. Username/Password/E-mail etc...), a input/select/textarea which will be filled by the user, and one or more potential errors (you will find more information about the possible error types below). The final structure should look something similiar to:
+Each field of the form should be contained inside a .form__group element. Inside every .form__group there should be a label, descibing the field (i.e. Username/Password/E-mail etc...), a input/select/textarea which will be filled by the user, and one or more controls (you will find more information about the control types below). The final structure should look something similiar to:
 
 ```
 <form class="form">
@@ -43,7 +43,7 @@ Each field of the form should be contained inside a .form__group element. Inside
 </form>
 ```
 
-##Errors
+##Controls
 There are several controls that Snapkit Validation plugin does.
 To add a new control, you should put a `<span class="form__group__info" data-validate="required">This field is required</span>` inside the .form__group element, after the input/select/textarea.
 The data-validate attribute tells the plugin what kind of check should be applied to the relative input/select/textarea.
