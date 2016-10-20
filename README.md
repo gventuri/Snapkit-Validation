@@ -80,20 +80,21 @@ Still work in progress
 ##How to pass a paramether
 Some kind of controls (minLenght, maxLenght, match) require a paramether. Passing a param is incredibly easy. The only thing you have to do is to add a separator (`|`) followed bt the paramether inside your data-validate attribute, in order to have something like this:
 
--For minLenght: `data-validate="minLenght | 4"` -> since we are passing the number 4 as a paramether, it means the relative field must be at least 4 characters long
--For maxLenght: `data-validate="maxLenght | 20"` -> since we are passing the number 20 as a paramether, it means the relative field must be no more than 20 characters long
--For check: `data-validate="maxLenght | #email"` -> since we are passing #email as a paramether, the Snapkit Validation plugin will check if the relative field (A) matches with the target field (with ID=email). We can use any kind of css selector to pass the target field.
+* For minLenght: `data-validate="minLenght | 4"` -> since we are passing the number 4 as a paramether, it means the relative field must be at least 4 characters long
+* For maxLenght: `data-validate="maxLenght | 20"` -> since we are passing the number 20 as a paramether, it means the relative field must be no more than 20 characters long
+* For match: `data-validate="maxLenght | #email"` -> since we are passing #email as a paramether, the Snapkit Validation plugin will check if the relative field (A) matches with the target field (with ID=email). We can use any kind of css selector to pass the target field.
 
 ##Reporting issues and contributing code
 
 We hope this documentation clarifies most of your doubts. Don't hesitate to add new issues if you need support or if you have any suggestions to improve the script or this documentation itself.
 
 ####TO-DO LIST
--Finish the implementation of pattern and ajax controls
--Write down a better documentation
--Realize a youtube video to better explain how to implement Snapkit Validation Plugin.
--Make the script customizable and usable without css dependencies, just by configuring the style as well via js
+* Finish the implementation of pattern and ajax controls
+* Write down a better documentation
+* Realize a youtube video to better explain how to implement Snapkit Validation Plugin.
+* Make the script customizable and usable without css dependencies, just by configuring the style as well via js
 
 ##License
 Copyright © Snapgle (https://snapgle.com/)
+
 Licensed under the MIT license.
