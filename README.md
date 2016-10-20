@@ -10,9 +10,9 @@ The form should follow this flexible structure, based on css BEM syntax. In the 
 ```
 form.form (The form)
 |_.form__group (A group, relative to a input/select/textarea and their possible errors)
- |_.form__group__label (The label describing the field, i.e. Username/Password/E-mail/Message etc...)
-  |_input/select/textarea
-  |_.form__group__info (The possible errors)
+ |_.form__group__label (The label, i.e. Username/Password/E-mail/Message etc...)
+  |_input/select/textarea (The field itself)
+  |_.form__group__info (The control)
   |_.form__group__info
 ```
   
