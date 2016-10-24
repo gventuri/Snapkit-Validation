@@ -1,6 +1,9 @@
 # Snapkit Validation
 Snapkit Validation is a simple jQuery plugin for form validation. You can learn how to setup and use it in less than 5 minutes, just by reading this documentation.
 
+##Example
+You can see a live example at http://snapgle.com/examples/SnapkitValidation/.
+
 ##Installation
 The only thing you have to do to setup the Snapkit Validation Plugin inside your page is to include the css file inside the `<header></header>` element, and the js file before closing the `<body>` element. Then, you can start creating your form, following the structure below.
 
