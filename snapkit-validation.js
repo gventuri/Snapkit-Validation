@@ -1,9 +1,9 @@
-/*------------------------------------*\ 
-    SNAPKIT VALIDATION PLUGIN V1.0 (https://github.com/Snapgle/Snapkit-Validation/)
+/*------------------------------------*\
+    FORM VALIDATION PLUGIN V1.0 (https://github.com/Snapgle/Snapkit-Validation/)
     Automatically validate each form in the page
-    
+
     Copyright (c) 2016 Snapgle (https://snapgle.com)
-    
+
     Licensed under the MIT license (http://www.opensource.org/licenses/MIT)
 \*------------------------------------*/
 (function($) {
@@ -260,6 +260,8 @@
   $(document).on("submit", "form", function(e){
     //From now it will validate the form, even on input update
     $(this).snapkitValidation(e);
+
+    $(this).closest(".form").find('.form__group--danger').first().find("input,textarea,select").focus();
   });
 })(jQuery);
 /* END OF VALIDATION PLUGIN */
