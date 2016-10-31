@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    FORM VALIDATION PLUGIN V1.0 (https://github.com/Snapgle/Snapkit-Validation/)
+    FORM VALIDATION PLUGIN V1.0.1 (https://github.com/Snapgle/Snapkit-Validation/)
     Automatically validate each form in the page
 
     Copyright (c) 2016 Snapgle (https://snapgle.com)
@@ -264,4 +264,3 @@
     $(this).closest(".form").find('.form__group--danger').first().find("input,textarea,select").focus();
   });
 })(jQuery);
-/* END OF VALIDATION PLUGIN */
