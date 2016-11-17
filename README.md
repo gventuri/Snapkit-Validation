@@ -18,31 +18,31 @@ form.form (The form)
   |_.form__group__info (The control)
   |_.form__group__info
 ```
-  
+
 Each field of the form should be contained inside a .form__group element. Inside every .form__group there should be a label, descibing the field (i.e. Username/Password/E-mail etc...), a input/select/textarea which will be filled by the user, and one or more controls (you will find more information about the control types below). The final structure should look something similiar to:
 
 ```
 <form class="form">
   <div class="form__group">
     <label>Username</label>
-    
+
     <input type="text">
-    
+
     <span class="form__group__info" data-validate="required">This field is required</span>
   </div>
-  
+
   <div class="form__group">
     <label>Password</label>
-    
+
     <input type="text">
-    
+
     <span class="form__group__info" data-validate="required">This field is required</span>
     <span class="form__group__info" data-validate="minLenght | 4">The password should be at least 4 characters long</span>
     ...
   </div>
-  
+
   ...
-  
+
 </form>
 ```
 
@@ -75,7 +75,7 @@ It requires the user to fill the field with no more than 'x' characters, where '
 It requires the relative field (A) to match with another field (B). You can set the target field by sending via paramether the id/class of the target element (B). As you can see in the following example, we added a `data-validate="match | #email"` attribute, meaning that the field must match with the #email field (B). To add this control, you need to insert `<span class="form__group__info" data-validate="match | #email">The emails doesn't match</span>` after your input/select/textarea element.
 
 ###pattern
-Still work in progress
+It requires the relative field to satisfy the specified regexp. For example, to require the field to be alphanumeric, we could add something like this: `data-validate="pattern | ^([a-zA-Z0-9+])$"` and it will work just great. To add this control, you need to insert `<span class="form__group__info" data-validate="pattern | YourRegularExpression">The regular expression has not been satisfied</span>` after your input/select/textarea element.
 
 ###ajax
 Still work in progress
@@ -86,13 +86,14 @@ Some kind of controls (minLenght, maxLenght, match) require a paramether. Passin
 * For minLenght: `data-validate="minLenght | 4"` -> since we are passing the number 4 as a paramether, it means the relative field must be at least 4 characters long
 * For maxLenght: `data-validate="maxLenght | 20"` -> since we are passing the number 20 as a paramether, it means the relative field must be no more than 20 characters long
 * For match: `data-validate="maxLenght | #email"` -> since we are passing #email as a paramether, the Snapkit Validation plugin will check if the relative field (A) matches with the target field (with ID=email). We can use any kind of css selector to pass the target field.
+* For pattern: `data-validate="pattern | ^([a-z]+)$"` -> this will require the relative input to be alphabetic only, and lowercase. We can change the regexp the way we prefer.
 
 ##Reporting issues and contributing code
 
 We hope this documentation clarifies most of your doubts. Don't hesitate to add new issues if you need support or if you have any suggestions to improve the script or this documentation itself.
 
 ####TO-DO LIST
-* Finish the implementation of pattern and ajax controls
+* Finish the implementation of ajax controls
 * Write down a better documentation
 * Realize a youtube video to better explain how to implement Snapkit Validation Plugin.
 * Make the script customizable and usable without css dependencies, just by configuring the style as well via js

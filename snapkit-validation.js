@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    FORM VALIDATION PLUGIN V1.0.1 (https://github.com/Snapgle/Snapkit-Validation/)
+    FORM VALIDATION PLUGIN V1.0.2 (https://github.com/Snapgle/Snapkit-Validation/)
     Automatically validate each form in the page
 
     Copyright (c) 2016 Snapgle (https://snapgle.com)
@@ -55,9 +55,11 @@
           });
 
           //Add the event listener even on the other match input
-          $(param).on("keyup", function(){
-            validator.check(error, target, type, param);
-          });
+          if(type == "match"){
+            $(param).on("keyup", function(){
+              validator.check(error, target, type, param);
+            });
+          }
         }
       }
     });
@@ -206,10 +208,10 @@
   }
 
   //Check if the pattern is valid
-  snapkitValidation.prototype.check_pattern = function(error, input, pattern){
+  snapkitValidation.prototype.check_pattern = function(error, input, param){
     var validator = this;
 
-    pattern = new RegExp(pattern, "gi");
+    pattern = stringToRegexp(param);
 
     if(!pattern.test(input.val())){
       error.removeClass("form__group__info--valid");
@@ -263,4 +265,13 @@
 
     $(this).closest(".form").find('.form__group--danger').first().find("input,textarea,select").focus();
   });
+
+  //Return the correct pattern
+  function stringToRegexp(str){
+    var flags = str.replace(/.*\/([gimuy]*)$/, '$1');
+    if(flags === str) flags = '';
+    var pattern = (flags ? str.replace(new RegExp('^/(.*?)/' + flags + '$'), '$1') : str);
+    try { return new RegExp(pattern, flags); } catch (e) { return null; }
+  }
 })(jQuery);
+/* END OF VALIDATION PLUGIN */

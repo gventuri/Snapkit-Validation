@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Snapkit Validation Plugin 1.0</title>
+    <title>Snapkit Validation Plugin 1.0.2</title>
 
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@
   </head>
   <body>
 		<div class="container">
-			<h1>Snapkit Validation Plugin 1.0 <br><small>(https://github.com/Snapgle/Snapkit-Validation)</small></h1>
+			<h1>Snapkit Validation Plugin 1.0.2 <br><small>(https://github.com/Snapgle/Snapkit-Validation)</small></h1>
 
 			<br><br><br>
 
@@ -62,6 +62,11 @@
 					<span class="form__group__info" data-validate="minLenght | 20">The comment must be at least 20 chars long</span>
 					<span class="form__group__info" data-validate="maxLenght | 40">The comment must be no more than 40 chars long</span>
         </div>
+        <div class="form-group form__group">
+			    <label for="name" class="form__group__label">Phone number:</label>
+			    <input type="text" class="form-control" id="name">
+					<span class="form__group__info" data-validate="pattern | ^([0-8]+)$">Wrong phone number (Can contain only numbers from 0 to 8)</span>
+			  </div>
 				<div class="text-center">
 					<input class="btn btn-default" name="submit" type="submit" value="Send message">
 				</div>
